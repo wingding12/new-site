@@ -3874,6 +3874,25 @@ body.is-preload #header.alt .logo {
   transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
 }
 
+/* Position Entry Styling */
+.position-entry {
+  border: 1px solid rgba(99, 99, 99, 0.15);
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.position-entry:hover {
+  border-color: rgba(99, 99, 99, 0.25);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.position-entry:last-child {
+  margin-bottom: 0;
+}
+
 .additional-positions.show {
   opacity: 1;
   max-height: 2000px;
