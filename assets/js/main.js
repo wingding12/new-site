@@ -166,6 +166,10 @@
             if (entry.isIntersecting) {
               spotlightContent.classList.add("fade-left");
               spotlightImage.classList.add("fade-right");
+            } else {
+              // Remove animation classes when element goes out of view
+              spotlightContent.classList.remove("fade-left");
+              spotlightImage.classList.remove("fade-right");
             }
           });
         },
@@ -183,6 +187,9 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               footer.classList.add("slide-bottom");
+            } else {
+              // Remove animation class when element goes out of view
+              footer.classList.remove("slide-bottom");
             }
           });
         },
