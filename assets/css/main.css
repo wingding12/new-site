@@ -3865,6 +3865,203 @@ body.is-preload #header.alt .logo {
   }
 }
 
+/* Scroll Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+}
+
+.fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fade-scale {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+.slide-bottom {
+  animation: slideInBottom 0.8s ease-out forwards;
+}
+
+/* Staggered animations for lists */
+.features li {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.features li.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.features li:nth-child(1).animate {
+  transition-delay: 0.1s;
+}
+.features li:nth-child(2).animate {
+  transition-delay: 0.2s;
+}
+.features li:nth-child(3).animate {
+  transition-delay: 0.3s;
+}
+
+.statistics li {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.statistics li.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statistics li:nth-child(1).animate {
+  transition-delay: 0.1s;
+}
+.statistics li:nth-child(2).animate {
+  transition-delay: 0.2s;
+}
+.statistics li:nth-child(3).animate {
+  transition-delay: 0.3s;
+}
+.statistics li:nth-child(4).animate {
+  transition-delay: 0.4s;
+}
+.statistics li:nth-child(5).animate {
+  transition-delay: 0.5s;
+}
+
+/* Position entries staggered animation */
+.position-entry.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.row .col-3:nth-child(1) .position-entry.animate {
+  transition-delay: 0.1s;
+}
+.row .col-3:nth-child(2) .position-entry.animate {
+  transition-delay: 0.2s;
+}
+.row .col-3:nth-child(3) .position-entry.animate {
+  transition-delay: 0.3s;
+}
+.row .col-3:nth-child(4) .position-entry.animate {
+  transition-delay: 0.4s;
+}
+
+.row .col-6:nth-child(1) .position-entry.animate {
+  transition-delay: 0.1s;
+}
+.row .col-6:nth-child(2) .position-entry.animate {
+  transition-delay: 0.2s;
+}
+
+/* Section headers animation */
+header.major {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+header.major.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button animations */
+.actions {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.actions.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon animations */
+.icon.major {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease-out;
+}
+
+.icon.major.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* Positions Dropdown Styles */
 
 .additional-positions {
@@ -3881,7 +4078,9 @@ body.is-preload #header.alt .logo {
   padding: 1.5em;
   margin-bottom: 1.5em;
   background-color: rgba(255, 255, 255, 0.02);
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
 }
 
 .position-entry:hover {

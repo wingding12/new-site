@@ -126,4 +126,75 @@
       }
     });
   }
+
+  // Scroll Animations
+  function initScrollAnimations() {
+    // Create intersection observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          // Remove animation class when element goes out of view
+          entry.target.classList.remove("animate");
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animatable elements
+    const animateElements = document.querySelectorAll(
+      "header.major, .features li, .statistics li, .position-entry, .actions, .icon.major"
+    );
+
+    animateElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Special handling for spotlight content (About section)
+    const spotlightContent = document.querySelector(".spotlight .content");
+    const spotlightImage = document.querySelector(".spotlight .image");
+
+    if (spotlightContent && spotlightImage) {
+      const spotlightObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              spotlightContent.classList.add("fade-left");
+              spotlightImage.classList.add("fade-right");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      spotlightObserver.observe(spotlightContent);
+    }
+
+    // Special handling for footer
+    const footer = document.querySelector("#footer");
+    if (footer) {
+      const footerObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              footer.classList.add("slide-bottom");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      footerObserver.observe(footer);
+    }
+  }
+
+  // Initialize animations when DOM is ready
+  $(document).ready(function () {
+    initScrollAnimations();
+  });
 })(jQuery);
