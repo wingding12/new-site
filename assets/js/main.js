@@ -116,12 +116,12 @@
       if (isVisible) {
         // Hide additional positions
         $additionalPositions.removeClass("show");
-        $toggleText.text("Show More Positions");
+        $toggleText.text("Show More");
         $toggleIcon.removeClass("rotated");
       } else {
         // Show additional positions
         $additionalPositions.addClass("show");
-        $toggleText.text("Show Less Positions");
+        $toggleText.text("Show Less");
         $toggleIcon.addClass("rotated");
       }
     });
