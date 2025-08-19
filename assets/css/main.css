@@ -216,7 +216,7 @@ body.is-preload *:after {
 
 body {
   background-color: #935d8c;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(0, 0, 0, 0.85);
 }
 
 body,
@@ -4111,7 +4111,7 @@ header.major.animate {
 }
 
 .project-period {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 0.9em;
   font-style: italic;
 }
@@ -4130,7 +4130,7 @@ header.major.animate {
 
 .tech-tag {
   background: rgba(99, 99, 99, 0.2);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   padding: 0.3em 0.8em;
   border-radius: 20px;
   font-size: 0.8em;
@@ -4151,7 +4151,7 @@ header.major.animate {
 .project-achievements li {
   margin-bottom: 0.8em;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .project-achievements li:last-child {
