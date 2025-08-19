@@ -4070,7 +4070,9 @@ header.major.animate {
   padding: 2em;
   margin-bottom: 2.5em;
   background-color: rgba(255, 255, 255, 0.02);
-  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
 }
 
 .project-entry:hover {
