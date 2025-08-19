@@ -148,7 +148,7 @@
 
     // Observe all animatable elements
     const animateElements = document.querySelectorAll(
-      "header.major, .features li, .statistics li, .position-entry, .actions, .icon.major"
+      "header.major, .features li, .statistics li, .position-entry, .project-entry, .actions, .icon.major"
     );
 
     animateElements.forEach((el) => {
